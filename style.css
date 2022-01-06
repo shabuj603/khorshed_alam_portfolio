@@ -1,0 +1,908 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    transition: all 0.3s  ease;
+}
+.sticky{
+    background: crimson;
+    padding: 15px 0;
+    z-index: 1;
+}
+
+.max_width{
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .max_width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+font-size: 39px;
+font-weight: 600;
+color: #fff;
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li a{
+font-size: 24px;
+font-weight: 300;
+color: #fff;
+margin-left: 25px;
+}
+.navbar .menu li a:hover{
+    color: rgb(224, 2, 58);
+}
+.sticky .menu li a:hover{
+    color: rgb(17, 15, 29);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menue-btn{
+    color:#fff;
+    font-size: 25px;
+    display: none;
+}
+.sticky .menue-btn{
+    color: rgb(10, 12, 1);
+}
+/* menue section  */
+
+
+/* Home section style  */
+.home{
+    display: flex;
+    background: url("images/IMG_0411.JPG") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    flex-wrap: wrap;
+}
+/* .home .block{
+    position: relative;
+    display: block;
+    height: 5vw;
+    width: 5vw;
+    background: #fff;
+    animation: animate 0.75s ease-in-out forwards;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(0) translate(100px);
+       
+    }
+    50%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translate(0px);
+        background: url("images/IMG_0411.JPG") no-repeat center;
+    }
+} */
+.home .max_width{
+    float: left;
+    display: flex;
+    text-align: left;
+    margin: auto 0  auto 20px;
+}
+.home .home_content{
+    display: block;
+    width: fit-content;
+    animation-delay: inherit;
+}
+.home .home_content .text_1{
+    font-size: 27px;
+    color: #fff;
+    animation-delay: 1s;
+}
+.home .home_content .text_2{
+    font-size: 75px;
+    font-weight: 600;
+    color: #fff;
+  
+}
+.home .home_content .text_3{
+    font-size: 40px;
+    color: #fff;   
+}
+.home .home_content .text_3 span{
+    font-weight: 500;
+    color: crimson;
+}
+.home_content a{
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid crimson;
+}
+.home_content a:hover{
+color: crimson;
+background: transparent;
+}
+
+/* about section start  */
+ .about{
+    margin-bottom: 30px;
+}
+
+.about .about_title{
+    position: relative;
+    font-size: 60px;
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.about .about_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.about .about_title::after{
+    content: 'who i am';
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(175, 24, 24);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+
+.about_content{
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.about_content .about_left{
+width: 45%;
+}
+
+.about_content .about_right{
+    width: 55%;
+}
+   
+.about_left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.about_right .text{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+ 
+.about_right span{
+    color: crimson;
+}
+
+.about_right .post{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 26px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.about_right .cv{
+    display: flex;
+    margin-top: 10px;
+}
+
+.about_right .cv a{
+    font-size: 20px;
+    font-weight: 200;
+    border: 2px solid crimson;
+    background-color: crimson;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.about_right .cv a:hover{
+    background-color: transparent;
+    color: crimson;
+} 
+/* about section end  */
+
+/* service section start  */
+.project_manue{
+    float: left;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 30px 0;
+}
+.project_manue .heading{
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.project_manue .heading::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+.project_manue .heading::after{
+    content: 'what i provide';
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    background: rgb(0, 0, 0);
+    color: rgb(175, 24, 24);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.project_manue .card_section{
+    float: left;
+    width: calc(33% - 20px);
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card_section .fab_icon_here{
+    font-size: 30px;
+    color: red;
+}
+.card_section .headin{
+    color: #fff;
+    font-size: 25px;
+    padding: 5px;
+}
+.card_section .post{
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1pxs;
+    color: #fff;
+    text-align: center;
+}
+.project_manue .card_section:hover{
+    background-color: crimson;
+    color: #fff;
+}
+.project_manue .card_section:hover .fab_icon_here{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* skill section start  */
+.myskill{
+    float: left;
+    margin-bottom: 30px;
+}
+
+.skill_title{
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.myskill .skill_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.myskill .skill_title::after{
+    content: 'what i know';
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(175, 24, 24);
+    padding: 5px;
+    transform: translateX(-50%);
+} 
+.skill_content{
+    width: 100%;
+}
+.skill_content .skill_left_section{
+    float: left;
+    width: 45%;
+    text-align: justify;
+    font-size: 25px;
+    line-height: 28px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 200;
+
+}
+.skill_read_more{
+    display: flex;    
+    padding: 10px 0;
+}
+.skill_read_more a{
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid crimson;
+    text-align: center;
+}
+.skill_read_more a:hover{
+    color:crimson;
+    background: transparent;
+}
+.skill_content .skill_colume_right{
+    float: left;
+    box-sizing: border-box;
+    padding-left: 40px;
+    width: 55%;
+    font-size: 20px;
+    font-weight: 600;
+    /* background-color: rgb(0, 255, 157); */
+
+} 
+.skill_colume_right .bars{
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+.bars .info{
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.bars .info .head{
+    float: left;
+    display: flex;
+
+}
+.bars .info .parsent{
+    float: left;
+    display: flex;
+}
+.line{
+    float: left;
+    width: 100%;
+    display: inline;
+    height: 4px;
+    background-color: rgb(148, 140, 140);
+}
+
+.line::before{
+    content: '';
+    position: absolute;
+    background: crimson;   
+    width: 38%;
+    height: 4px;
+   }
+.html::before{
+    width: 35%;
+}
+.css::before{
+width: 30%;
+}
+.Javascript::before{
+    width: 25%;
+}
+.jquery::before{
+    width: 28%;
+}
+.angular::before{
+    width: 30%;
+}
+.php::before{
+    width: 30%;
+}
+.mysql::before{
+    width: 35%;
+}
+.nodejs::before{
+    width: 32%;
+}
+.photoshop::before{
+    width: 32%;
+}
+.autocad::before{
+    width: 32%;
+}
+.footer{
+    float: left;
+    width: 100%;
+    background: rgb(23, 23, 49);
+    height: 60px;
+    padding: 20px;
+}
+
+
+/* my skill section end  */
+
+
+/* service section start  */
+.card_manue{
+    float: left;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 30px 0;
+}
+.card_manue .heading{
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.card_manue .heading::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+.card_manue .heading::after{
+    content: 'what i provide';
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    background: rgb(0, 0, 0);
+    color: rgb(175, 24, 24);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.card_manue .card_section{
+    float: left;
+    width: calc(33% - 20px);
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+}
+.card_manue .card_section .fab_icon_here{
+    font-size: 30px;
+    color: rgb(231, 9, 9);
+}
+.card_manue .card_section .headin{
+    color: #fff;
+    font-size: 25px;
+    padding: 5px;
+}
+.card_manue .card_section .post{
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1pxs;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.card_manue  .card_section:hover{
+    background-color: crimson;
+    color: #fff;
+}
+.card_manue .card_section:hover .fab_icon_here{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+/* service section End  */
+
+/* Contact section start  */
+.contact{
+    float: left;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+}
+
+.contact .title{
+    position: relative;
+    font-size: 60px;
+    padding: 20px 0px;
+    text-align: center;
+    /* color: mediumorchid; */
+    font-weight: 400;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.contact .title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.contact .title::after{
+    content: 'get in touch';
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(175, 24, 24);
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.contact_section{
+    width: 100%;
+
+}
+.contact_section .colume_left{
+    float: left;
+    width: 50%;
+    text-align: justify;
+    /* background-color: yellow; */
+    font-size: 25px;
+    line-height: 28px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 200;
+
+}
+.colume_left_title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.colume_left .post{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+}
+.colume_left .addres_bar{
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+.addres_bar .fab_icon{
+    float: left;
+    width: 10%;
+    display: flex;
+    height: auto;  
+    font-size: 40px;
+    padding: 10px 30px 10px 0;    
+    color: crimson;
+}
+.addres_bar .name_section{
+    float: left;
+  }
+  .addres_bar .name_section .contact_name{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .addres_bar .name_section .contact_fullName{
+    font-size: 20px;
+    color: rgb(17, 20, 1);
+  }
+.contact_section .colume_right{
+    float: left;
+    box-sizing: border-box;
+    padding-left: 40px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.colume_right_title{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.colume_right .name_sectin{
+    float: left;
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    padding:15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-right: 20px;
+    border: 1px solid rgb(19, 5, 211);
+}
+.colume_right .name_sectin:focus{
+    border: none;   
+}
+.colume_right .subject_sectin{
+    margin: 20px 0;
+    padding: 15px;
+    width: 97%;
+    border-radius: 10px;
+    border: 1px solid rgb(19, 5, 211);
+}
+.colume_right .subject_sectin:focus{
+    border: none;    
+}
+.colume_right .descrip_sectin{
+    padding: 15px;
+    width: 97%;
+    border-radius: 10px;
+    border: 1px solid rgb(19, 5, 211);
+}
+.colume_right .descrip_sectin:focus{
+    border: none;    
+} 
+.message_send{
+    display: flex;    
+    padding: 10px 0;
+}
+.message_send a{
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid crimson;
+    text-align: center;
+}
+.message_send a:hover{
+    color:crimson;
+    background: transparent;
+}
+.footer{
+    float: left;
+    width: 100%;
+    background: rgb(23, 23, 49);
+    height: 60px;
+    padding: 20px;
+}
+.footer{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-size: 16px;
+    font-weight: 400;
+}
+.copy_right{
+    color: #fff;
+}
+.copy_right .fname{
+    color: crimson;
+}
+
+/* responsive menu  */
+@media only screen and (max-width: 991px) {
+   
+    .navbar{
+        position: fixed;
+        width: 100%;
+        padding: 15px 0;
+        transition: all 0.3s  ease;
+    }
+    .sticky{
+        background: crimson;
+        padding: 15px 0;
+    }
+    .max_width{
+        padding: 0 50px;
+    }
+    .navbar .max_width{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a {
+    font-size: 39px;
+    font-weight: 600;
+    color: #fff;
+    }
+    .navbar .logo a span{
+        color: crimson;
+    }
+    .sticky .logo a span{
+        color: #fff;
+    }
+    .navbar .menu{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu .active{
+    left: 0;
+    }
+    .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+    }
+    .navbar .menu li a:hover{
+        color: crimson;
+    }
+    .navbar .menu li{
+        list-style: none;
+        display: block;
+    }
+    
+    .menue-btn{
+       display: block;
+        z-index: 999;
+    }
+    .sticky .menue-btn{
+        color: rgb(10, 12, 1);
+    }
+    .sticky{
+        background: crimson;
+        padding: 15px 0;
+        z-index: 1;
+    }
+    /* menue section  */
+    
+    
+    /* Home section style  */
+    .home{
+        display: flex;
+        background: url("images/IMG_0411.JPG") no-repeat center;
+        height: 100vh;
+        min-height: 500px;
+        color: #fff;
+    }
+    .home .max_width{
+        margin: auto 0  auto 40px;
+    }
+    .home .home_content{
+        display: block;
+        width: fit-content;
+        animation-delay: inherit;
+    }
+    .home .home_content .text_1{
+        font-size: 27px;
+        color: #fff;
+        background-color: crimson;
+        animation: text_reveal_box 1s ease;
+        animation-delay: 1s;
+    }
+    .home .home_content .text_2{
+        font-size: 75px;
+        font-weight: 600;
+        color: #fff;
+        margin-left: -3px;
+    }
+    .home .home_content .text_3{
+        font-size: 40px;
+        color: #fff;
+        margin: 5px 0;
+    }
+    .home .home_content .text_3 span{
+        font-weight: 500;
+        color: crimson;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+ /* @media only screen and (orientation: landscape) {
+    body {
+        background-color: yellow;
+    } 
+} */
+@media only screen and (max-width: 991px) {
+    .max_width {
+        padding: 0 90px !important;
+    }
+    .home{ 
+    height: 37vh;
+    min-height: 200px;  
+   }
+   .home .home_content .text_1{
+    font-size: 24px;
+    text-align: center;
+   }
+   .home .home_content .text_2{
+    font-size: 60px;
+   }
+   .home .home_content .text_3{
+       font-size: 37px;
+   }
+   .about_content .about_left{
+    float: left;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+   }
+   .about_left img{
+       height: 300px;
+       width: 300px;    
+   }
+   .about_content .about_right{
+       float: left;
+       width: 100%;
+       justify-content: center;
+   }
+   .about_right .text{
+       text-align: center;
+       padding: 10px 10px;
+   }
+   .about_right .post{
+       text-align: center;
+   }
+   .about_right .cv{
+       margin: 10px 0px;
+       justify-content: center;
+   }
+
+}
