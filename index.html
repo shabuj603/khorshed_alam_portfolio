@@ -25,6 +25,72 @@
 
         .skill-bar { height: 10px; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
         .skill-progress { height: 100%; background: linear-gradient(to right, #6366f1, #a5b4fc); transition: width 2s ease; }
+    
+    .animate-on-scroll{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .8s ease;
+}
+
+.animate-on-scroll.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.animate-left{
+    opacity:0;
+    transform:translateX(-100px);
+    transition:all 1s ease;
+}
+
+.animate-left.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.animate-right{
+    opacity:0;
+    transform:translateX(100px);
+    transition:all 1s ease;
+}
+
+.animate-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.zoom-image{
+    overflow:hidden;
+    border-radius:24px;
+}
+
+.zoom-image img{
+    transition:transform .8s ease;
+}
+
+.zoom-image:hover img{
+    transform:scale(1.08);
+}
+
+.fade-delay-1{
+    transition-delay:.2s;
+}
+
+.fade-delay-2{
+    transition-delay:.4s;
+}
+
+.fade-delay-3{
+    transition-delay:.6s;
+}
+
+.fade-delay-4{
+    transition-delay:.8s;
+}
+.progress-bar{
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
     </style>
 </head>
 <body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
@@ -56,7 +122,9 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8 animate-on-scroll">
                 <h1 class="text-6xl md:text-7xl font-bold heading-font">Hello, I'm <span class="text-indigo-400">Khorshed Alam</span></h1>
-                <p class="text-3xl text-zinc-300">Senior Web Developer</p>
+                <h1 class="text-5xl font-bold">
+    I'm <span id="typed"></span>
+</h1>
                 <p class="text-zinc-400 max-w-lg">Laravel, React, WordPress ও PHP দিয়ে আধুনিক, দ্রুতগতির এবং নিরাপদ ওয়েবসাইট, ই-কমার্স প্ল্যাটফর্ম ও কাস্টম ওয়েব অ্যাপ্লিকেশন তৈরি করি যা আপনার ব্যবসাকে আরও এগিয়ে নিতে সাহায্য করে।</p>
                 <div class="flex gap-4">
                     <a href="#contact" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-2xl font-semibold">Hire Me</a>
@@ -74,119 +142,485 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold heading-font text-center mb-16">About Me</h2>
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="animate-on-scroll">
-                    <img src="images/IMG_4368.jpg" alt="" class="rounded-3xl shadow-xl">
+                <div class="animate-left">
+                    <div class="zoom-image shadow-2xl rounded-3xl">
+                        <img src="images/IMG_4368.jpg"
+                            class="rounded-3xl w-full"
+                            alt="Khorshed Alam">
+                    </div>
                 </div>
-                <div class="space-y-6 animate-on-scroll">
-                 
-                  
-                    <p class="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-    আমি <strong>MD. Khorshed Alam</strong>, একজন উৎসাহী এবং অভিজ্ঞ ফুল-স্ট্যাক ওয়েব ডেভেলপার। 
-    Laravel, PHP, WordPress, WooCommerce, MySQL এবং আধুনিক জাভাস্ক্রিপ্ট ফ্রেমওয়ার্ক দিয়ে ওয়েব সল্যুশন তৈরি করতে আমি প্যাশনেট।
-</p>
-<p class="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-    গত কয়েক বছরে আমি অনেকগুলো সফল প্রজেক্ট সম্পন্ন করেছি — অনলাইন মার্কেটপ্লেস, ই-কমার্স ওয়েবসাইট, জব পোর্টাল, কাস্টম ওয়েব অ্যাপ্লিকেশন এবং ওয়ার্ডপ্রেস থিম-প্লাগিন ডেভেলপমেন্ট।
-</p>
-<p class="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-    আমি বিশ্বাস করি, প্রতিটি প্রজেক্ট হওয়া উচিত শুধু সুন্দর নয়, বরং দ্রুত, নিরাপদ এবং সহজে ব্যবহারযোগ্য। 
-    ক্লায়েন্টের সন্তুষ্টিই আমার সবচেয়ে বড় প্রাপ্তি।
-</p>
-  <p class="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                        আমি শুধু কোড লিখি না, ব্যবহারকারীর অভিজ্ঞতা (UX) এবং ব্যবসার প্রবৃদ্ধির কথা মাথায় রেখে প্রজেক্ট তৈরি করি।
-                    </p>
-                </div>
+                <div class="space-y-6">
+
+    <p class="animate-right fade-delay-1 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        আমি <strong>MD. Khorshed Alam</strong>, একজন উৎসাহী এবং অভিজ্ঞ ফুল-স্ট্যাক ওয়েব ডেভেলপার।
+        Laravel, PHP, React, Tailwind CSS, WordPress, WooCommerce, MySQL এবং আধুনিক জাভাস্ক্রিপ্ট ফ্রেমওয়ার্ক দিয়ে ওয়েব সল্যুশন তৈরি করতে আমি প্যাশনেট।
+    </p>
+
+    <p class="animate-right fade-delay-2 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        গত কয়েক বছরে আমি অনেকগুলো সফল প্রজেক্ট সম্পন্ন করেছি — অনলাইন মার্কেটপ্লেস, ই-কমার্স ওয়েবসাইট, জব পোর্টাল, কাস্টম ওয়েব অ্যাপ্লিকেশন এবং ওয়ার্ডপ্রেস থিম-প্লাগিন ডেভেলপমেন্ট।
+    </p>
+
+    <p class="animate-right fade-delay-3 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        আমি বিশ্বাস করি, প্রতিটি প্রজেক্ট হওয়া উচিত শুধু সুন্দর নয়, বরং দ্রুত, নিরাপদ এবং সহজে ব্যবহারযোগ্য।
+        ক্লায়েন্টের সন্তুষ্টিই আমার সবচেয়ে বড় প্রাপ্তি।
+    </p>
+
+    <p class="animate-right fade-delay-4 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        আমি শুধু কোড লিখি না, ব্যবহারকারীর অভিজ্ঞতা (UX) এবং ব্যবসার প্রবৃদ্ধির কথা মাথায় রেখে প্রজেক্ট তৈরি করি।
+    </p>
+
+</div>
             </div>
         </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-24 bg-zinc-100 dark:bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold heading-font text-center mb-16">My Projects</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <a href="http://jobpost.laravelproject.xyz" target="_blank" class="card bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-6xl">🛒</div>
-                    <div class="p-6"><h3 class="font-semibold text-xl">Online Marketplace</h3></div>
-                </a>
-                <a href="http://laravelproject.xyz" target="_blank" class="card bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-6xl">🛍️</div>
-                    <div class="p-6"><h3 class="font-semibold text-xl">E-Commerce Site</h3></div>
-                </a>
-                <a href="https://wpmart.org" target="_blank" class="card bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-6xl">📦</div>
-                    <div class="p-6"><h3 class="font-semibold text-xl">WordPress Plugin</h3></div>
-                </a>
-            </div>
+   <!-- Projects Section -->
+<section id="projects" class="py-24 bg-zinc-100 dark:bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold heading-font">My Projects</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mt-3 text-lg">কিছু নির্বাচিত প্রজেক্ট যা আমি সম্পন্ন করেছি</p>
         </div>
-    </section>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <a href="http://jobpost.laravelproject.xyz" target="_blank" 
+               class="card group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-7xl transition-transform group-hover:scale-110">
+                    🛒
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl mb-2">Hisab Online</h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">Laravel • MySQL • Payment Gateway</p>
+                    <p class="text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        সম্পূর্ণ অনলাইন মার্কেটপ্লেস সিস্টেম। ব্যবহারকারীরা পণ্য ক্রয়-বিক্রয় করতে পারবে।
+                    </p>
+                    <div class="mt-5 flex items-center gap-2 text-xs text-indigo-600">
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">Laravel</span>
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">Live</span>
+                    </div>
+                </div>
+            </a>
 
-    <!-- Skills -->
-    <section id="skills" class="py-24 bg-white dark:bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold heading-font text-center mb-16">My Skills</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div><div class="flex justify-between mb-2"><span>HTML5 / CSS3</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress w-[95%]"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>Laravel & PHP</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress w-[90%]"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>WordPress</span><span>88%</span></div><div class="skill-bar"><div class="skill-progress w-[88%]"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>JavaScript / jQuery</span><span>75%</span></div><div class="skill-bar"><div class="skill-progress w-[75%]"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>React</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress w-[90%]"></div></div></div>
-                    <div><div class="flex justify-between mb-2"><span>Photoshop</span><span>60%</span></div><div class="skill-bar"><div class="skill-progress w-[60%]"></div></div></div>
+            <!-- Project 2 -->
+            <a href="http://laravelproject.xyz" target="_blank" 
+               class="card group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-7xl transition-transform group-hover:scale-110">
+                    🛍️
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl mb-2">E-Commerce Platform</h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">Laravel • React • MySQL • Payment Gateway </p>
+                    <p class="text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        আধুনিক ই-কমার্স ওয়েবসাইট। পণ্য ম্যানেজমেন্ট, কার্ট এবং অর্ডার সিস্টেম সহ।
+                    </p>
+                    <div class="mt-5 flex items-center gap-2 text-xs text-indigo-600">
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">Laravel</span>
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">Live</span>
+                    </div>
+                </div>
+            </a>
 
-    <!-- Services -->
-    <section id="services" class="py-24 bg-zinc-100 dark:bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold heading-font text-center mb-16">Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card bg-white dark:bg-zinc-900 p-8 rounded-3xl text-center">
-                    <i class="fas fa-code text-5xl text-indigo-600 mb-4"></i>
-                    <h3 class="font-semibold text-xl">Web Development</h3>
+            <!-- Project 3 -->
+            <a href="https://wpmart.org" target="_blank" 
+               class="card group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-7xl transition-transform group-hover:scale-110">
+                    📦
                 </div>
-                <div class="card bg-white dark:bg-zinc-900 p-8 rounded-3xl text-center">
-                    <i class="fab fa-wordpress text-5xl text-blue-600 mb-4"></i>
-                    <h3 class="font-semibold text-xl">WordPress Development</h3>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl mb-2">WordPress Plugin</h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">WordPress • PHP • JavaScript</p>
+                    <p class="text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        কাস্টম ওয়ার্ডপ্রেস প্লাগিন ডেভেলপমেন্ট। বিভিন্ন ফিচার সমৃদ্ধ।
+                    </p>
+                    <div class="mt-5 flex items-center gap-2 text-xs text-indigo-600">
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">WordPress</span>
+                    </div>
                 </div>
-                <div class="card bg-white dark:bg-zinc-900 p-8 rounded-3xl text-center">
-                    <i class="fas fa-paint-brush text-5xl text-rose-600 mb-4"></i>
-                    <h3 class="font-semibold text-xl">UI/UX Design</h3>
+            </a>
+
+            <!-- Project 4 - Hajj & Umrah -->
+            <a href="https://wpmart.org" target="_blank" 
+               class="card group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-7xl transition-transform group-hover:scale-110">
+                    🕋
+                </div>
+                <div class="p-7">
+                    <h3 class="font-semibold text-2xl mb-2">Hajj & Umrah Management</h3>
+                    <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">Laravel • React</p>
+                    <p class="text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        হজ্জ ও উমরাহ ব্যবস্থাপনা সিস্টেম। প্যাকেজ, রেজিস্ট্রেশন এবং পেমেন্ট ম্যানেজমেন্ট।
+                    </p>
+                    <div class="mt-5 flex items-center gap-2 text-xs text-indigo-600">
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">Laravel</span>
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">React</span>
+                        <span class="bg-indigo-100 dark:bg-indigo-900 px-3 py-1 rounded-full">MySQL</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4 - Hajj & Umrah -->
+           <a href="https://wpmart.org" target="_blank"
+   class="card group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl">
+    
+    <div class="h-56 bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-7xl transition-transform group-hover:scale-110">
+        🛒
+    </div>
+
+    <div class="p-7">
+        <h3 class="font-semibold text-2xl mb-2">POS Management System</h3>
+
+        <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-4">
+            Laravel • React • MySQL
+        </p>
+
+        <p class="text-zinc-600 dark:text-zinc-400 line-clamp-3">
+            আধুনিক Point of Sale (POS) সিস্টেম যেখানে Sales, Purchase, Inventory,
+            Customer, Supplier, Invoice, Expense এবং রিপোর্ট সহজেই পরিচালনা করা যায়।
+        </p>
+
+        <div class="mt-5 flex flex-wrap items-center gap-2 text-xs text-blue-600">
+            <span class="bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">Laravel</span>
+            <span class="bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">React</span>
+            <span class="bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">MySQL</span>
+            <span class="bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">POS</span>
+        </div>
+    </div>
+
+</a>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+<section id="skills" class="py-24 bg-white dark:bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold heading-font">My Skills</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mt-3">প্রযুক্তি যা আমি দক্ষতার সাথে ব্যবহার করি</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left Side: Skill Bars -->
+            <div class="space-y-8">
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">HTML5 / CSS3 / Tailwind</span>
+                        <span class="font-mono text-indigo-600">95%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[95%]"></div></div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Laravel & PHP</span>
+                        <span class="font-mono text-indigo-600">92%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[92%]"></div></div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">WordPress & WooCommerce</span>
+                        <span class="font-mono text-indigo-600">90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[90%]"></div></div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">JavaScript / jQuery</span>
+                        <span class="font-mono text-indigo-600">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[80%]"></div></div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">MySQL Database</span>
+                        <span class="font-mono text-indigo-600">88%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[88%]"></div></div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">React / Vue.js</span>
+                        <span class="font-mono text-indigo-600">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[80%]"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Photoshop</span>
+                        <span class="font-mono text-indigo-600">60%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress w-[60%]"></div></div>
                 </div>
             </div>
+
+            <!-- Right Side: Description -->
+            <div class="space-y-8 animate-on-scroll">
+                <div class="bg-zinc-50 dark:bg-zinc-800 p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Why Choose Me?</h3>
+                    <ul class="space-y-4 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex gap-3">
+                            <span class="text-green-500 mt-1">✔</span>
+                            <span>পরিষ্কার, সুন্দর এবং মেইনটেইনেবল কোড লিখি</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-green-500 mt-1">✔</span>
+                            <span>ক্লায়েন্টের প্রয়োজন অনুযায়ী কাস্টম সল্যুশন তৈরি করি</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-green-500 mt-1">✔</span>
+                            <span>দ্রুত লোডিং এবং মোবাইল ফ্রেন্ডলি ডিজাইন</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-green-500 mt-1">✔</span>
+                            <span>প্রজেক্ট ডেলিভারির পরও সাপোর্ট প্রদান করি</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+                    আমি শুধু কোড লিখি না, প্রতিটি প্রজেক্টকে ব্যবসার জন্য কার্যকরী এবং ব্যবহারকারী-বান্ধব করে তুলি। 
+                    Laravel, WordPress, PHP, MySQL এবং আধুনিক টুলস দিয়ে কাজ করতে আমি সবসময় উৎসাহী।
+                </p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+   <!-- Services Section -->
+<section id="services" class="py-24 bg-zinc-100 dark:bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold heading-font">My Services</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mt-4 text-lg">আমি যেসব সেবা প্রদান করি</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Service 1 -->
+            <div class="card group bg-white dark:bg-zinc-900 p-10 rounded-3xl hover:shadow-2xl transition-all duration-300">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-4">Custom Web Development</h3>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                    Laravel, PHP এবং আধুনিক টেকনোলজি দিয়ে কাস্টম ওয়েব অ্যাপ্লিকেশন ও ওয়েবসাইট তৈরি করি। পুরোপুরি রেসপনসিভ এবং স্কেলেবল।
+                </p>
+                <ul class="text-sm text-zinc-500 space-y-2">
+                    <li>✓ Laravel Web Application</li>
+                    <li>✓ Custom CMS</li>
+                    <li>✓ API Development</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card group bg-white dark:bg-zinc-900 p-10 rounded-3xl hover:shadow-2xl transition-all duration-300">
+                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fab fa-wordpress"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-4">WordPress Development</h3>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                    প্রফেশনাল ওয়ার্ডপ্রেস ওয়েবসাইট, থিম এবং প্লাগিন ডেভেলপমেন্ট। WooCommerce সহ ই-কমার্স সাইট তৈরি।
+                </p>
+                <ul class="text-sm text-zinc-500 space-y-2">
+                    <li>✓ Custom Theme Development</li>
+                    <li>✓ Plugin Development</li>
+                    <li>✓ WooCommerce Store</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card group bg-white dark:bg-zinc-900 p-10 rounded-3xl hover:shadow-2xl transition-all duration-300">
+                <div class="w-16 h-16 bg-rose-100 dark:bg-rose-900 text-rose-600 rounded-2xl flex items-center justify-center mb-6 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-4">UI/UX &amp; Design</h3>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                    আকর্ষণীয় ও ব্যবহারকারী-বান্ধব ডিজাইন। Figma এবং Photoshop দিয়ে মডার্ন ইউজার ইন্টারফেস তৈরি করি।
+                </p>
+                <ul class="text-sm text-zinc-500 space-y-2">
+                    <li>✓ Website Redesign</li>
+                    <li>✓ Landing Page Design</li>
+                    <li>✓ User Experience Optimization</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#contact" 
+               class="inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-medium text-lg transition">
+                <span>আমার সাথে যোগাযোগ করুন</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Contact -->
     <section id="contact" class="py-24 bg-white dark:bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold heading-font text-center mb-12">Contact Me</h2>
-            <div class="max-w-2xl mx-auto bg-zinc-100 dark:bg-zinc-950 p-10 rounded-3xl">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-5xl font-bold heading-font text-center mb-16">
+            Contact Me
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+
+            <!-- Contact Info -->
+            <div class="bg-zinc-100 dark:bg-zinc-950 rounded-3xl p-10">
+
+                <h3 class="text-3xl font-bold mb-4">
+                    Let's Talk
+                </h3>
+
+                <p class="text-zinc-600 dark:text-zinc-400 mb-8">
+                    Have a project in mind? Feel free to contact me anytime.
+                    I'm always ready to discuss your ideas and build something amazing.
+                </p>
+
+                <div class="space-y-6">
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Name</h4>
+                            <p class="text-zinc-500">MD Khorshed Alam</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Phone</h4>
+                            <p class="text-zinc-500">+880 1817-871770</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Email</h4>
+                            <p class="text-zinc-500">shabuj603@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Address</h4>
+                            <p class="text-zinc-500">
+                                Sattara Center, Hotel Victori, 30/A, 12th Floor, V.I.P Road, Nayataltan, Dhaka, Bangladesh
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-zinc-100 dark:bg-zinc-950 rounded-3xl p-10">
+
                 <form id="contact-form" class="space-y-6">
-                    <input type="text" id="name" required placeholder="Your Name" class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900">
-                    <input type="email" id="email" required placeholder="Your Email" class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900">
-                    <input type="text" id="subject" required placeholder="Subject" class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900">
-                    <textarea id="message" rows="6" required placeholder="Your Message" class="w-full px-6 py-4 rounded-3xl bg-white dark:bg-zinc-900"></textarea>
-                    
-                    <button type="submit" id="submit-btn" class="w-full py-5 bg-indigo-600 text-white rounded-2xl font-semibold flex items-center justify-center gap-3">
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        placeholder="Your Name"
+                        class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 outline-none">
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                        placeholder="Your Email"
+                        class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 outline-none">
+
+                    <input
+                        type="text"
+                        id="subject"
+                        required
+                        placeholder="Subject"
+                        class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 outline-none">
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        required
+                        placeholder="Your Message"
+                        class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 outline-none"></textarea>
+
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold transition flex items-center justify-center gap-3">
+
                         <span id="btn-text">Send Message</span>
                         <i id="btn-icon" class="fas fa-paper-plane"></i>
+
                     </button>
+
                 </form>
-                <div id="success-message" class="hidden text-center text-green-600 mt-6 font-medium">✅ Message Sent Successfully!</div>
-                <div id="error-message" class="hidden text-center text-red-600 mt-6 font-medium">❌ Something went wrong. Try again.</div>
+
+                <div id="success-message"
+                    class="hidden text-center text-green-600 mt-6 font-medium">
+                    ✅ Message Sent Successfully!
+                </div>
+
+                <div id="error-message"
+                    class="hidden text-center text-red-600 mt-6 font-medium">
+                    ❌ Something went wrong. Try again.
+                </div>
+
             </div>
+
         </div>
-    </section>
+
+    </div>
+</section>
 
     <footer class="bg-zinc-900 text-zinc-400 py-12 text-center">
         <p>&copy; 2026 MD. Khorshed Alam. All Rights Reserved.</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+var typed = new Typed("#typed", {
+    strings: [
+        "Laravel Developer.",
+        "React Developer.",
+        "WordPress Expert.",
+        "Full Stack Web Developer."
+    ],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true
+});
+</script>
     <script>
+        
         // EmailJS Setup - এখানে তোমার তথ্য বসাও
-        emailjs.init("YOUR_PUBLIC_KEY_HERE");
+        emailjs.init("QRihRTPo6T-4Fzv_d");
 
         const form = document.getElementById("contact-form");
         form.addEventListener("submit", function(e) {
@@ -204,7 +638,7 @@
                 message: document.getElementById("message").value,
             };
 
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+            emailjs.send("service_fqumemw", "template_q3a4irc", params)
                 .then(() => document.getElementById("success-message").classList.remove("hidden"))
                 .catch(() => document.getElementById("error-message").classList.remove("hidden"))
                 .finally(() => {
@@ -226,6 +660,22 @@
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
         }
+        const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{
+    threshold:0.2
+});
+
+document.querySelectorAll(".animate-on-scroll,.animate-left,.animate-right").forEach((el)=>{
+    observer.observe(el);
+});
+
     </script>
+    
+
 </body>
 </html>
